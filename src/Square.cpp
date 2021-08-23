@@ -7,9 +7,9 @@ Square::Square()
 
 Square::Square(double side) : Square()
 {
-    this->side = side;
-    this->width = side;
-    this->height = side;
+    this->side = (side < MINIMAL_SIDE ? MINIMAL_SIDE : side);
+    this->width = (side < MINIMAL_SIDE ? MINIMAL_SIDE : side);
+    this->height = (side < MINIMAL_SIDE ? MINIMAL_SIDE : side);
 }
 
 Square::Square(double side, int centerX, int centerY) : Square(side)
@@ -18,14 +18,24 @@ Square::Square(double side, int centerX, int centerY) : Square(side)
     this->centerY = centerY;
 }
 
-double Square::getSide() const
+double Square::getHeight()
 {
-    return this->side;
+    return this->height;
+}
+
+double Square::getWidth()
+{
+    return this->width;
+}
+
+double Square::getArea()
+{
+    return (width * height);
 }
 
 void Square::setSide(const double side)
 {
-    this->side = side;
-    this->width = side;
-    this->height = side;
+    this->side = (side < MINIMAL_SIDE ? MINIMAL_SIDE : side);
+    this->width = (side < MINIMAL_SIDE ? MINIMAL_SIDE : side);
+    this->height = (side < MINIMAL_SIDE ? MINIMAL_SIDE : side);
 }

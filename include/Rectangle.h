@@ -15,7 +15,11 @@ public:
     Rectangle(double width, double height, int centerX, int centerY);
 
     double getArea() override;
-    Borders* getOuterRect() override;
+    void printInfo() override;
+    void configure() override;
+
+    void setWidth(const double width); // Почему здесь всегда ноль?
+    void setHeight(const double height); //Почему здесь всегда ноль?
 };
 
 #endif //TASK_27_2_RECTANGLE_H

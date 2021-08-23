@@ -70,3 +70,46 @@ std::string Figure::getColorString()
             return "NONE";
     }
 }
+
+double Figure::getHeight() const
+{
+    return height;
+}
+
+double Figure::getWidth() const
+{
+    return width;
+}
+
+double Figure::getDoubleFromInput(std::string label)
+{
+    std::cout << label << "\n";
+    std::string input;
+    std::getline(std::cin, input);
+    try
+    {
+        double result = std::stod(input);
+        return result;
+    } catch (std::invalid_argument& ex)
+    {
+        std::cerr << "Invalid argument.\n";
+        return -1;
+    }
+}
+
+int Figure::getIntFromInput(std::string label)
+{
+    std::cout << label << "\n";
+    std::string input;
+    std::getline(std::cin, input);
+    try
+    {
+        int result = std::stoi(input);
+        return result;
+    } catch (std::invalid_argument& ex)
+    {
+        std::cerr << "Invalid argument.\n";
+        return -1;
+    }
+}
+

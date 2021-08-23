@@ -1,58 +1,25 @@
-#include "../include/Circle.h"
+#include "../include/Equalsided.h"
 
-Circle::Circle()
+double Equalsided::getSide() const
 {
-    this->figureType = CIRCLE;
-    this->radius = MINIMAL_RADIUS;
-    this->width = 2 * radius;
-    this->height = 2 * radius;
+    return this->side;
 }
 
-Circle::Circle(double radius) : Circle()
-{
-    this->radius = (radius < MINIMAL_RADIUS ? MINIMAL_RADIUS : radius);
-    this->width = 2 * radius;
-    this->height = 2 * radius;
-}
-
-Circle::Circle(double radius, int centerX, int centerY) : Circle(radius)
-{
-    this->centerX = centerX;
-    this->centerY = centerY;
-}
-
-double Circle::getRadius() const
-{
-    return this->radius;
-}
-
-double Circle::getArea()
-{
-    return (M_PI * std::pow(radius, 2));
-}
-
-void Circle::setRadius(const double radius)
-{
-    this->radius = (radius < MINIMAL_RADIUS ? MINIMAL_RADIUS : radius);
-    this->width = 2 * radius;
-    this->height = 2 * radius;
-}
-
-void Circle::printInfo()
+void Equalsided::printInfo()
 {
     std::cout << "------------ INFO ------------\n";
     std::cout << "\t - Type: " << getFigureTypeString() << "\n";
     std::cout << "\t - Center X: " << getCenterX() << "\n";
     std::cout << "\t - Center Y: " << getCenterY() << "\n";
     std::cout << "\t - Area: " << getArea() << "\n";
-    std::cout << "\t - Radius: " << getRadius() << "\n";
+    std::cout << "\t - Side: " << getSide() << "\n";
     std::cout << "\t - Color: " << getColorString() << "\n";
     std::cout << "\t - Outer rect (width): " << getWidth() << "\n";
     std::cout << "\t - Outer rect (height): " << getHeight() << "\n";
     std::cout << "------------------------------\n";
 }
 
-void Circle::configure()
+void Equalsided::configure()
 {
     int centerX = getIntFromInput("\t - Please enter center X:");
     if (centerX == -1) return;
@@ -65,10 +32,10 @@ void Circle::configure()
     else if (color > 3) color = 3;
     else if (color < 0) color = 0;
 
-    double r = getDoubleFromInput("\t - Please enter the radius:");
-    if (r == -1) return;
+    double side = getDoubleFromInput("\t - Please enter the side:");
+    if (side == -1) return;
 
-    setRadius(r);
+    setSide(side);
     setColor((Color) color);
     setCenterX(centerX);
     setCenterY(centerY);

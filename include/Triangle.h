@@ -1,25 +1,19 @@
 #ifndef TASK_27_2_TRIANGLE_H
 #define TASK_27_2_TRIANGLE_H
 
-#include "Figure.h"
+#include "Equalsided.h"
 
-class Triangle : public Figure {
-
-private:
-    const double MINIMAL_SIDE = 0.1;
-    double side {MINIMAL_SIDE};
+class Triangle : public Equalsided {
 
 public:
     Triangle();
     Triangle(double side);
     Triangle(double side, int centerX, int centerY);
 
+    double getHeight() override;
     double getArea() override;
-    Borders * getOuterRect() override;
-
-    double getSide() const;
-    void setSide(const double side);
-
+    double getWidth() override;
+    void setSide(const double side) override;
 };
 
 #endif //TASK_27_2_TRIANGLE_H

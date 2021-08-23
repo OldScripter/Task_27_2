@@ -15,7 +15,8 @@ public:
     Circle(double radius, int centerX, int centerY);
 
     double getArea() override;
-    Borders * getOuterRect() override;
+    void printInfo() override;
+    void configure() override;
 
     double getRadius() const;
     void setRadius(const double radius);

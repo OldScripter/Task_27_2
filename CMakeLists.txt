@@ -10,4 +10,4 @@ add_executable(
         src/Square.cpp
         src/Triangle.cpp
         src/Rectangle.cpp
-        src/Borders.cpp)
+        src/Equalsided.cpp)
