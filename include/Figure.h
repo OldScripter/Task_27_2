@@ -41,8 +41,18 @@ public:
     FigureType getFigureType() const;
     std::string getFigureTypeString();
 
+    /**
+     * @method Get the figure area.
+     * @return area int
+     */
     virtual double getArea() = 0;
+    /**
+     * @method Print the figure info.
+     */
     virtual void printInfo() = 0;
+    /**
+     * @method Config the Circle via command line input.
+     */
     virtual void configure() = 0;
 
     void setColor(const Color color);
@@ -52,7 +62,17 @@ public:
     double getWidth() const;
     double getHeight() const;
 
+    /**
+     * @method Get int value from command line input. Print the label before input.
+     * @param [in] label std::string
+     * @return value int
+     */
     static int getIntFromInput(std::string label);
+    /**
+     * @method Get double value from command line input. Print the label before input.
+     * @param [in] label std::string
+     * @return value double
+     */
     static double getDoubleFromInput(std::string label);
 };
 

@@ -9,7 +9,6 @@ protected:
     Equalsided(){};
     const double MINIMAL_SIDE = 0.1;
     double side {MINIMAL_SIDE};
-    virtual double getArea() = 0;
     virtual double getHeight() = 0;
     virtual double getWidth() = 0;
     virtual void setSide(const double side) = 0;

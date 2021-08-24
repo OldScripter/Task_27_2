@@ -34,19 +34,6 @@ void Rectangle::setHeight(const double height)
     this->height = (height < MINIMAL_SIDE ? MINIMAL_SIDE : height);
 }
 
-void Rectangle::printInfo()
-{
-    std::cout << "------------ INFO ------------\n";
-    std::cout << "\t - Type: " << getFigureTypeString() << "\n";
-    std::cout << "\t - Center X: " << getCenterX() << "\n";
-    std::cout << "\t - Center Y: " << getCenterY() << "\n";
-    std::cout << "\t - Area: " << getArea() << "\n";
-    std::cout << "\t - Color: " << getColorString() << "\n";
-    std::cout << "\t - Outer rect (width): " << getWidth() << "\n";
-    std::cout << "\t - Outer rect (height): " << getHeight() << "\n";
-    std::cout << "------------------------------\n";
-}
-
 void Rectangle::configure()
 {
     int centerX = getIntFromInput("\t - Please enter center X:");
@@ -71,4 +58,16 @@ void Rectangle::configure()
     setColor((Color) color);
     setCenterX(centerX);
     setCenterY(centerY);
+}
+
+void Rectangle::printInfo()
+{
+    std::cout << "------------ INFO ------------\n";
+    std::cout << "\t - Type: " << getFigureTypeString() << "\n";
+    std::cout << "\t - Center X: " << getCenterX() << "\n";
+    std::cout << "\t - Center Y: " << getCenterY() << "\n";
+    std::cout << "\t - Area: " << getArea() << "\n";
+    std::cout << "\t - Color: " << getColorString() << "\n";
+    std::cout << "\t - Outer rect (width): " << this->width << "\n";
+    std::cout << "\t - Outer rect (height): " << this->height << "\n";
 }

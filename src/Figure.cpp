@@ -73,12 +73,12 @@ std::string Figure::getColorString()
 
 double Figure::getHeight() const
 {
-    return height;
+    return this->height;
 }
 
 double Figure::getWidth() const
 {
-    return width;
+    return this->width;
 }
 
 double Figure::getDoubleFromInput(std::string label)
@@ -112,4 +112,5 @@ int Figure::getIntFromInput(std::string label)
         return -1;
     }
 }
+
 

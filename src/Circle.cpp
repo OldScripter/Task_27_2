@@ -45,11 +45,10 @@ void Circle::printInfo()
     std::cout << "\t - Center X: " << getCenterX() << "\n";
     std::cout << "\t - Center Y: " << getCenterY() << "\n";
     std::cout << "\t - Area: " << getArea() << "\n";
-    std::cout << "\t - Radius: " << getRadius() << "\n";
     std::cout << "\t - Color: " << getColorString() << "\n";
-    std::cout << "\t - Outer rect (width): " << getWidth() << "\n";
-    std::cout << "\t - Outer rect (height): " << getHeight() << "\n";
-    std::cout << "------------------------------\n";
+    std::cout << "\t - Outer rect (width): " << this->width << "\n";
+    std::cout << "\t - Outer rect (height): " << this->height << "\n";
+    std::cout << "\t - Radius: " << getRadius() << "\n";
 }
 
 void Circle::configure()

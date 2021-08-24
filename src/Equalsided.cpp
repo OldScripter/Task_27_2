@@ -12,11 +12,10 @@ void Equalsided::printInfo()
     std::cout << "\t - Center X: " << getCenterX() << "\n";
     std::cout << "\t - Center Y: " << getCenterY() << "\n";
     std::cout << "\t - Area: " << getArea() << "\n";
-    std::cout << "\t - Side: " << getSide() << "\n";
     std::cout << "\t - Color: " << getColorString() << "\n";
     std::cout << "\t - Outer rect (width): " << getWidth() << "\n";
     std::cout << "\t - Outer rect (height): " << getHeight() << "\n";
-    std::cout << "------------------------------\n";
+    std::cout << "\t - Side: " << getSide() << "\n";
 }
 
 void Equalsided::configure()
